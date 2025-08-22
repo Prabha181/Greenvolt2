@@ -6392,50 +6392,38 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                 >
                   Technical Specifications
                 </div>
-                <h2
-                  class="text-3xl lg:text-4xl font-bold text-greenvolt-black mb-6"
-                >
+                <h2 class="text-3xl lg:text-4xl font-bold text-greenvolt-black mb-6">
                   Complete Technical Details
                 </h2>
                 <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                  Comprehensive specifications to help you make an informed
-                  decision about your electric vehicle purchase.
+                  Comprehensive specifications to help you make an informed decision
+                  about your electric vehicle purchase.
                 </p>
               </div>
-              <div dir="ltr" data-orientation="horizontal" class="w-full">
+
+              <!-- Tabs -->
+              <div class="w-full">
                 <div
                   role="tablist"
                   aria-orientation="horizontal"
-                  class="h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground grid w-full grid-cols-4 mb-8"
-                  tabindex="0"
-                  data-orientation="horizontal"
-                  style="outline: none"
+                  class="h-10 items-center justify-center rounded-md bg-muted p-1 text-muted-foreground grid w-full grid-cols-4 mb-8 "
                 >
                   <button
                     type="button"
                     role="tab"
-                    aria-selected="true"
-                    aria-controls="radix-:r0:-content-performance"
-                    data-state="active"
-                    id="radix-:r0:-trigger-performance"
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    aria-selected="false"
+                    data-tab="performance"
+                    class="tab-btn inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-colors hover:bg-greenvolt-green hover:text-white"
                   >
                     Performance
                   </button>
                   <button
                     type="button"
                     role="tab"
-                    aria-selected="false"
-                    aria-controls="radix-:r0:-content-battery"
-                    data-state="inactive"
-                    id="radix-:r0:-trigger-battery"
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    aria-selected="true"
+                    data-tab="battery"
+                    class="tab-btn data-[active=true]:bg-white data-[active=true]:text-greenvolt-black data-[active=true]:shadow-sm inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-colors hover:bg-greenvolt-green hover:text-white"
+                    data-active="true"
                   >
                     Battery
                   </button>
@@ -6443,13 +6431,8 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     type="button"
                     role="tab"
                     aria-selected="false"
-                    aria-controls="radix-:r0:-content-features"
-                    data-state="inactive"
-                    id="radix-:r0:-trigger-features"
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    data-tab="features"
+                    class="tab-btn inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-colors hover:bg-greenvolt-green hover:text-white"
                   >
                     Features
                   </button>
@@ -6457,125 +6440,126 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     type="button"
                     role="tab"
                     aria-selected="false"
-                    aria-controls="radix-:r0:-content-comfort"
-                    data-state="inactive"
-                    id="radix-:r0:-trigger-comfort"
-                    class="inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 data-[state=active]:bg-background data-[state=active]:text-foreground data-[state=active]:shadow-sm"
-                    tabindex="-1"
-                    data-orientation="horizontal"
-                    data-radix-collection-item=""
+                    data-tab="comfort"
+                    class="tab-btn inline-flex items-center justify-center whitespace-nowrap rounded-sm px-3 py-1.5 text-sm font-medium transition-colors hover:bg-greenvolt-green hover:text-white"
                   >
                     Comfort
                   </button>
                 </div>
-                <div
-                  data-state="active"
-                  data-orientation="horizontal"
-                  role="tabpanel"
-                  aria-labelledby="radix-:r0:-trigger-performance"
-                  id="radix-:r0:-content-performance"
-                  tabindex="0"
-                  class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                  style="animation-duration: 0s"
-                >
+
+                <!-- Performance -->
+                <div class="tab-content" id="performance">
                   <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    <div
-                      class="rounded-lg text-card-foreground border-0 shadow-lg bg-white"
-                    >
-                      <div class="p-6">
-                        <div class="flex justify-between items-center">
-                          <span class="text-gray-600 font-medium"
-                            >Top Speed</span
-                          ><span class="text-greenvolt-black font-bold"
-                            >65 km/h</span
-                          >
-                        </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Top Speed</span>
+                        <span class="text-greenvolt-black font-bold">65 km/h</span>
                       </div>
                     </div>
-                    <div
-                      class="rounded-lg text-card-foreground border-0 shadow-lg bg-white"
-                    >
-                      <div class="p-6">
-                        <div class="flex justify-between items-center">
-                          <span class="text-gray-600 font-medium"
-                            >Range per Charge</span
-                          ><span class="text-greenvolt-black font-bold"
-                            >80-100 km</span
-                          >
-                        </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Range per Charge</span>
+                        <span class="text-greenvolt-black font-bold">80-100 km</span>
                       </div>
                     </div>
-                    <div
-                      class="rounded-lg text-card-foreground border-0 shadow-lg bg-white"
-                    >
-                      <div class="p-6">
-                        <div class="flex justify-between items-center">
-                          <span class="text-gray-600 font-medium"
-                            >Charging Time</span
-                          ><span class="text-greenvolt-black font-bold"
-                            >6-8 hours</span
-                          >
-                        </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Charging Time</span>
+                        <span class="text-greenvolt-black font-bold">6-8 hours</span>
                       </div>
                     </div>
-                    <div
-                      class="rounded-lg text-card-foreground border-0 shadow-lg bg-white"
-                    >
-                      <div class="p-6">
-                        <div class="flex justify-between items-center">
-                          <span class="text-gray-600 font-medium"
-                            >Motor Power</span
-                          ><span class="text-greenvolt-black font-bold"
-                            >2000W BLDC</span
-                          >
-                        </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Motor Power</span>
+                        <span class="text-greenvolt-black font-bold">2000W BLDC</span>
                       </div>
                     </div>
-                    <div
-                      class="rounded-lg text-card-foreground border-0 shadow-lg bg-white"
-                    >
-                      <div class="p-6">
-                        <div class="flex justify-between items-center">
-                          <span class="text-gray-600 font-medium"
-                            >Acceleration</span
-                          ><span class="text-greenvolt-black font-bold"
-                            >0-40 in 8 seconds</span
-                          >
-                        </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Acceleration</span>
+                        <span class="text-greenvolt-black font-bold">0-40 in 8s</span>
                       </div>
                     </div>
                   </div>
                 </div>
-                <div
-                  data-state="inactive"
-                  data-orientation="horizontal"
-                  role="tabpanel"
-                  aria-labelledby="radix-:r0:-trigger-battery"
-                  hidden=""
-                  id="radix-:r0:-content-battery"
-                  tabindex="0"
-                  class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                ></div>
-                <div
-                  data-state="inactive"
-                  data-orientation="horizontal"
-                  role="tabpanel"
-                  aria-labelledby="radix-:r0:-trigger-features"
-                  hidden=""
-                  id="radix-:r0:-content-features"
-                  tabindex="0"
-                  class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                ></div>
-                <div
-                  data-state="inactive"
-                  data-orientation="horizontal"
-                  role="tabpanel"
-                  aria-labelledby="radix-:r0:-trigger-comfort"
-                  hidden=""
-                  id="radix-:r0:-content-comfort"
-                  tabindex="0"
-                  class="mt-2 ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
-                ></div>
+
+                <!-- Battery -->
+                <div class="tab-content hidden" id="battery">
+                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Battery Type</span>
+                        <span class="text-greenvolt-black font-bold">Lithium-ion</span>
+                      </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Capacity</span>
+                        <span class="text-greenvolt-black font-bold">60V / 30Ah</span>
+                      </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Battery Type</span>
+                        <span class="text-greenvolt-black font-bold">Lithium-ion</span>
+                      </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Battery Type</span>
+                        <span class="text-greenvolt-black font-bold">Lithium-ion</span>
+                      </div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6 flex justify-between">
+                        <span class="text-gray-600 font-medium">Battery Type</span>
+                        <span class="text-greenvolt-black font-bold">Lithium-ion</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Features -->
+                <div class="tab-content hidden" id="features">
+                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Smart Keyless Entry</div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Digital Speedometer</div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Anti-theft Alarm</div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Smart Keyless Entry</div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Digital Speedometer</div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comfort -->
+                <div class="tab-content hidden" id="comfort">
+                  <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Telescopic Suspension</div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Extra Wide Seat</div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Tubeless Tyres</div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Extra Wide Seat</div>
+                    </div>
+                    <div class="rounded-lg shadow-lg bg-white">
+                      <div class="p-6">Tubeless Tyres</div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </section>
@@ -7151,17 +7135,33 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
 
     <script type="module" src="./sasdasdasdasd_files/App.tsx"></script>
     <script>
-  const toggleBtn = document.getElementById("menu-toggle");
-  const mobileMenu = document.getElementById("mobile-menu");
+      const toggleBtn = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
 
-  toggleBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("opacity-0");
-    mobileMenu.classList.toggle("-translate-y-4");
-    mobileMenu.classList.toggle("invisible");
-    mobileMenu.classList.toggle("opacity-100");
-    mobileMenu.classList.toggle("translate-y-0");
-    mobileMenu.classList.toggle("visible");
-  });
-</script>
+      toggleBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("opacity-0");
+        mobileMenu.classList.toggle("-translate-y-4");
+        mobileMenu.classList.toggle("invisible");
+        mobileMenu.classList.toggle("opacity-100");
+        mobileMenu.classList.toggle("translate-y-0");
+        mobileMenu.classList.toggle("visible");
+      });
+    </script>
+    <script>
+      const tabBtns = document.querySelectorAll(".tab-btn");
+      const tabContents = document.querySelectorAll(".tab-content");
+
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          // remove active from all
+          tabBtns.forEach((b) => b.setAttribute("data-active", "false"));
+          tabContents.forEach((c) => c.classList.add("hidden"));
+
+          // add active to clicked
+          btn.setAttribute("data-active", "true");
+          document.getElementById(btn.dataset.tab).classList.remove("hidden");
+        });
+      });
+    </script>
   </body>
 </html>
