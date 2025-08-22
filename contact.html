@@ -5990,48 +5990,39 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                             placeholder="Tell us how we can help you..."
                           ></textarea>
                         </div>
-                        <button
-                          onclick="openPopup()"
-                          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors
-                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
-                          [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 
-                          bg-greenvolt-green hover:bg-greenvolt-green-dark text-white w-full py-3"
-                          type="button"
-                        >
-                          Send Message
-                          <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            class="lucide lucide-send ml-2 h-5 w-5"
-                            aria-hidden="true"
-                          >
-                            <path
-                              d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"
-                            ></path>
-                            <path d="m21.854 2.147-10.94 10.939"></path>
-                          </svg>
-                        </button>
+                        <form id="contact-form" class="space-y-4">
+  <!-- your inputs here -->
 
-                        <!-- Popup -->
-                        <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-                          <div class="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
-                            <h2 class="text-lg font-semibold text-green-600">✅ Message Sent!</h2>
-                            <p class="mt-2 text-gray-700">Your message was successfully sent.</p>
-                            <button
-                              onclick="closePopup()"
-                              class="mt-4 px-4 py-2 bg-greenvolt-green hover:bg-greenvolt-green-dark text-white rounded-md"
-                            >
-                              OK
-                            </button>
-                          </div>
-                        </div>
+  <button
+    id="send-btn"
+    type="submit"
+    class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors
+           focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
+           [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4
+           bg-greenvolt-green hover:bg-greenvolt-green-dark text-white w-full py-3"
+  >
+    Send Message
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+         stroke-linejoin="round" class="lucide lucide-send ml-2 h-5 w-5" aria-hidden="true">
+      <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
+      <path d="m21.854 2.147-10.94 10.939"></path>
+    </svg>
+  </button>
+</form>
+
+<!-- Popup (modal) -->
+<div id="success-backdrop" class="hidden fixed inset-0 z-50 flex items-center justify-center bg-black/50">
+  <div role="dialog" aria-modal="true"
+       class="bg-white rounded-lg shadow-lg w-80 p-6 text-center">
+    <h2 class="text-lg font-semibold text-green-600">✅ Message sent</h2>
+    <p class="mt-2 text-gray-700">Your message was successfully sent.</p>
+    <button id="success-ok"
+            class="mt-4 px-4 py-2 rounded-md bg-greenvolt-green hover:bg-greenvolt-green-dark text-white">
+      OK
+    </button>
+  </div>
+</div>
                       </form>
                     </div>
                   </div>
@@ -6478,15 +6469,29 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         </footer>
       </div>
     </div>
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const form = document.getElementById('contact-form');
+    const backdrop = document.getElementById('success-backdrop');
+    const okBtn = document.getElementById('success-ok');
 
-    <script>
-      function openPopup() {
-        document.getElementById("popup").classList.remove("hidden");
-      }
-      function closePopup() {
-        document.getElementById("popup").classList.add("hidden");
-      }
-    </script>
+    function openPopup() { backdrop.classList.remove('hidden'); }
+    function closePopup() { backdrop.classList.add('hidden'); }
+
+    // Show popup on submit (and stop page reload)
+    form.addEventListener('submit', (e) => {
+      e.preventDefault(); // IMPORTANT: prevents white page reload
+      openPopup();
+    });
+
+    okBtn.addEventListener('click', closePopup);
+
+    // Close when clicking outside the dialog
+    backdrop.addEventListener('click', (e) => {
+      if (e.target === backdrop) closePopup();
+    });
+  });
+</script>
     <script>
       const btn = document.getElementById("whatsappBtn");
 
