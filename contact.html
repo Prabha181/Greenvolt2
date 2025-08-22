@@ -5017,16 +5017,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         opacity: 0;
         transform: scale(0.8) translate(-50%, -50%);
       }
-      .popup {
-            opacity: 0;
-            transform: translateY(-20px);
-            transition: all 0.3s ease-in-out;
-        }
-        
-        .popup.show {
-            opacity: 1;
-            transform: translateY(0);
-        }
+      
     </style>
   </head>
 
@@ -5912,117 +5903,46 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                       </p>
                     </div>
                     <div class="p-6 pt-0">
-                      <form class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                          <div>
-                            <label
-                              class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold"
-                              for="name"
-                              >Full Name *</label
-                            >
-                            <input
-                              type="text"
-                              class="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 border-gray-300 focus:border-greenvolt-green"
-                              id="name"
-                              name="name"
-                              required=""
-                              placeholder="Enter your full name"
-                              value=""
-                            />
-                          </div>
-                          <div>
-                            <label
-                              class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold"
-                              for="phone"
-                              >Phone Number *</label
-                            >
-                            <input
-                              type="tel"
-                              class="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 border-gray-300 focus:border-greenvolt-green"
-                              id="phone"
-                              name="phone"
-                              required=""
-                              placeholder="+91 XXXXX XXXXX"
-                              value=""
-                            />
-                          </div>
-                        </div>
-                        <div>
-                          <label
-                            class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold"
-                            for="email"
-                            >Email Address *</label
-                          >
-                          <input
-                            type="email"
-                            class="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 border-gray-300 focus:border-greenvolt-green"
-                            id="email"
-                            name="email"
-                            required=""
-                            placeholder="your.email@example.com"
-                            value=""
-                          />
-                        </div>
-                        <div>
-                          <label
-                            class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold"
-                            for="inquiry"
-                            >Inquiry Type</label
-                          >
-                          <select
-                            id="inquiry"
-                            name="inquiry"
-                            class="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-greenvolt-green"
-                          >
-                            <option value="general">General Inquiry</option>
-                            <option value="purchase">Vehicle Purchase</option>
-                            <option value="test-drive">
-                              Test Drive Booking
-                            </option>
-                            <option value="service">
-                              Service &amp; Support
-                            </option>
-                            <option value="finance">Financing Options</option>
-                            <option value="corporate">Corporate Sales</option>
-                          </select>
-                        </div>
-                        <div>
-                          <label
-                            class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold"
-                            for="message"
-                            >Message *</label
-                          >
-                          <textarea
-                            class="flex w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-2 border-gray-300 focus:border-greenvolt-green min-h-[120px]"
-                            id="message"
-                            name="message"
-                            required=""
-                            placeholder="Tell us how we can help you..."
-                          ></textarea>
-                        </div>
-                        <button
-                class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 bg-greenvolt-green hover:bg-greenvolt-green-dark text-white w-full py-3"
-                type="submit"
-            >
-                Send Message
-                <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-send ml-2 h-5 w-5"
-                    aria-hidden="true"
-                >
-                    <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
-                    <path d="m21.854 2.147-10.94 10.939"></path>
-                </svg>
-            </button>
-            <div id="successPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+    <form class="space-y-6" onsubmit="handleSubmit(event)">
+        <div class="grid md:grid-cols-2 gap-6">
+            <div>
+                <label class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold" for="name">Full Name *</label>
+                <input type="text" class="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 border-gray-300 focus:border-greenvolt-green" id="name" name="name" required="" placeholder="Enter your full name" value="">
+            </div>
+            <div>
+                <label class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold" for="phone">Phone Number *</label>
+                <input type="tel" class="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 border-gray-300 focus:border-greenvolt-green" id="phone" name="phone" required="" placeholder="+91 XXXXX XXXXX" value="">
+            </div>
+        </div>
+        <div>
+            <label class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold" for="email">Email Address *</label>
+            <input type="email" class="flex h-10 w-full rounded-md border bg-background px-3 py-2 text-base ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 md:text-sm mt-2 border-gray-300 focus:border-greenvolt-green" id="email" name="email" required="" placeholder="your.email@example.com" value="">
+        </div>
+        <div>
+            <label class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold" for="inquiry">Inquiry Type</label>
+            <select id="inquiry" name="inquiry" class="mt-2 w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:border-greenvolt-green">
+                <option value="general">General Inquiry</option>
+                <option value="purchase">Vehicle Purchase</option>
+                <option value="test-drive">Test Drive Booking</option>
+                <option value="service">Service & Support</option>
+                <option value="finance">Financing Options</option>
+                <option value="corporate">Corporate Sales</option>
+            </select>
+        </div>
+        <div>
+            <label class="text-sm leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 text-greenvolt-black font-semibold" for="message">Message *</label>
+            <textarea class="flex w-full rounded-md border bg-background px-3 py-2 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 mt-2 border-gray-300 focus:border-greenvolt-green min-h-[120px]" id="message" name="message" required="" placeholder="Tell us how we can help you..."></textarea>
+        </div>
+        <button class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 bg-greenvolt-green hover:bg-greenvolt-green-dark text-white w-full py-3" type="submit">
+            Send Message
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-send ml-2 h-5 w-5" aria-hidden="true">
+                <path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"></path>
+                <path d="m21.854 2.147-10.94 10.939"></path>
+            </svg>
+        </button>
+    </form>
+
+    <div id="successPopup" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
         <div class="popup bg-white rounded-lg p-6 max-w-sm w-full mx-4 shadow-2xl">
             <div class="text-center">
                 <div class="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-green-100 mb-4">
@@ -6031,14 +5951,14 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                     </svg>
                 </div>
                 <h3 class="text-lg font-medium text-gray-900 mb-2">Success!</h3>
-                <p class="text-sm text-gray-500 mb-4">The message was successfully sent</p>
+                <p class="text-sm text-gray-500 mb-4">Your message was successfully sent</p>
                 <button onclick="closePopup()" class="bg-greenvolt-green hover:bg-greenvolt-green-dark text-white px-4 py-2 rounded-md text-sm font-medium transition-colors">
                     OK
                 </button>
             </div>
         </div>
     </div>
-                      </form>
+</div>
                     </div>
                   </div>
                 </div>
@@ -6484,49 +6404,7 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         </footer>
       </div>
     </div>
-<script>
-        function handleSubmit(event) {
-            event.preventDefault();
-            showSuccessPopup();
-        }
 
-        function showSuccessPopup() {
-            const popup = document.getElementById('successPopup');
-            const popupContent = popup.querySelector('.popup');
-            
-            popup.classList.remove('hidden');
-            
-            // Trigger animation
-            setTimeout(() => {
-                popupContent.classList.add('show');
-            }, 10);
-        }
-
-        function closePopup() {
-            const popup = document.getElementById('successPopup');
-            const popupContent = popup.querySelector('.popup');
-            
-            popupContent.classList.remove('show');
-            
-            setTimeout(() => {
-                popup.classList.add('hidden');
-            }, 300);
-        }
-
-        // Close popup when clicking outside
-        document.getElementById('successPopup').addEventListener('click', function(e) {
-            if (e.target === this) {
-                closePopup();
-            }
-        });
-
-        // Close popup with Escape key
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closePopup();
-            }
-        });
-    </script>
     <script>
       const btn = document.getElementById("whatsappBtn");
 
@@ -6537,6 +6415,50 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
         btn.classList.toggle("text-white");
       });
     </script>
+
+    <script>
+    function handleSubmit(event) {
+        event.preventDefault();
+        showSuccessPopup();
+    }
+
+    function showSuccessPopup() {
+        const popup = document.getElementById('successPopup');
+        const popupContent = popup.querySelector('.popup');
+        
+        popup.classList.remove('hidden');
+        
+        // Trigger animation
+        setTimeout(() => {
+            popupContent.classList.add('show');
+        }, 10);
+    }
+
+    function closePopup() {
+        const popup = document.getElementById('successPopup');
+        const popupContent = popup.querySelector('.popup');
+        
+        popupContent.classList.remove('show');
+        
+        setTimeout(() => {
+            popup.classList.add('hidden');
+        }, 300);
+    }
+
+    // Close popup when clicking outside
+    document.getElementById('successPopup').addEventListener('click', function(e) {
+        if (e.target === this) {
+            closePopup();
+        }
+    });
+
+    // Close popup with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closePopup();
+        }
+    });
+</script>
 
     <script type="module" src="./contact_files/App.tsx"></script>
     <script>
