@@ -5991,8 +5991,12 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                           ></textarea>
                         </div>
                         <button
-                          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 h-10 px-4 bg-greenvolt-green hover:bg-greenvolt-green-dark text-white w-full py-3"
-                          type="submit"
+                          onclick="openPopup()"
+                          class="inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors
+                          focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50
+                          [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0 h-10 px-4 
+                          bg-greenvolt-green hover:bg-greenvolt-green-dark text-white w-full py-3"
+                          type="button"
                         >
                           Send Message
                           <svg
@@ -6014,6 +6018,20 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
                             <path d="m21.854 2.147-10.94 10.939"></path>
                           </svg>
                         </button>
+
+                        <!-- Popup -->
+                        <div id="popup" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                          <div class="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+                            <h2 class="text-lg font-semibold text-green-600">✅ Message Sent!</h2>
+                            <p class="mt-2 text-gray-700">Your message was successfully sent.</p>
+                            <button
+                              onclick="closePopup()"
+                              class="mt-4 px-4 py-2 bg-greenvolt-green hover:bg-greenvolt-green-dark text-white rounded-md"
+                            >
+                              OK
+                            </button>
+                          </div>
+                        </div>
                       </form>
                     </div>
                   </div>
@@ -6461,6 +6479,14 @@ Constrain images and videos to the parent width and preserve their intrinsic asp
       </div>
     </div>
 
+    <script>
+      function openPopup() {
+        document.getElementById("popup").classList.remove("hidden");
+      }
+      function closePopup() {
+        document.getElementById("popup").classList.add("hidden");
+      }
+    </script>
     <script>
       const btn = document.getElementById("whatsappBtn");
 
